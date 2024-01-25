@@ -39,12 +39,6 @@ export const SingleCourse = styled.div<{ $currency: string }>`
     padding: 15px 10px;
     text-align: center;
   }
-
-  img {
-    width: 100%;
-    height: 100px;
-    padding: 0 2px;
-  }
 `;
 
 export const Description = styled.div`
@@ -84,7 +78,7 @@ export const StyledFooter = styled.footer<{ $currency: string }>`
     font-weight: 700;
 
     &:hover {
-      background-color: black;
+      background-color: #ded240;
       color: white;
     }
   }

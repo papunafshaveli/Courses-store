@@ -1,3 +1,5 @@
+import React from "react";
+
 import { CourseT } from "../../types/types";
 import {
   CoursesContainer,
@@ -5,6 +7,8 @@ import {
   SingleCourse,
   StyledFooter,
 } from "./styles";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 type CoursesProp = {
   coursesData: CourseT[];
@@ -18,7 +22,14 @@ const Courses: React.FC<CoursesProp> = ({ coursesData, currency }) => {
         <SingleCourse key={item.id} $currency={currency}>
           <h2>{item.title}</h2>
 
-          <img src={item.img} alt="Course image" />
+          <LazyLoadImage
+            src={item.img}
+            width="100%"
+            height="100px"
+            effect="blur"
+            delayMethod="debounce"
+            delayTime={300}
+          />
           <Description>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
