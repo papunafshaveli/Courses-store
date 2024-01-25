@@ -26,7 +26,7 @@ function App() {
     <AppContainer $currency={currency}>
       <StyledHeader>
         <h4>Change currency:</h4>
-        <Buttons>
+        <Buttons $currency={currency}>
           <button onClick={handleUsd}>USD</button>
           <button onClick={handleEur}>EUR</button>
           <button onClick={handleGbp}>GBP</button>
@@ -69,7 +69,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Buttons = styled.div`
+const Buttons = styled.div<{ $currency: string }>`
   display: flex;
   gap: 10px;
 
@@ -81,9 +81,11 @@ const Buttons = styled.div`
 
     cursor: pointer;
 
-    &:hover {
-      background-color: black;
-      color: white;
-    }
+    background-color: ${({ $currency }) =>
+      $currency === "USD"
+        ? "#e1e1e1"
+        : $currency === "EUR"
+        ? "#7e9570"
+        : "#07af37"};
   }
 `;

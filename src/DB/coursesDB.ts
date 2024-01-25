@@ -6,6 +6,9 @@ import graphql from "../images/graphql.jpg";
 import Sass from "../images/Sass.jpg";
 import Bootstrap5 from "../images/Bootstrap5.jpg";
 import GitGitHub from "../images/GitGitHub.png";
+import kotlin from "../images/kotlin.png";
+import php from "../images/php.png";
+import swift from "../images/swift.jpeg";
 // Export DB
 export const coursesDB = [
   {
@@ -46,21 +49,21 @@ export const coursesDB = [
   },
   {
     id: 7,
-    title: "The Road to React",
-    price: 19.99,
-    img: react,
+    title: "The Road to Kotlin",
+    price: 21.99,
+    img: kotlin,
   },
   {
     id: 8,
-    title: "The Rout to GraphQL",
-    price: 29.99,
-    img: graphql,
+    title: "PHP - old but gold",
+    price: 46.99,
+    img: php,
   },
   {
     id: 9,
-    title: "The Road to JavaScript",
-    price: 14.99,
-    img: js,
+    title: "Swift - Always New!",
+    price: 24.99,
+    img: swift,
   },
   {
     id: 10,
