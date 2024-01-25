@@ -53,6 +53,8 @@ const AppContainer = styled.div<{ $currency: string }>`
       : $currency === "EUR"
       ? "#88886f"
       : "#64A075"};
+
+  transition: background-color 1000ms linear;
 `;
 
 const StyledHeader = styled.header`
