@@ -15,7 +15,7 @@ const Courses: React.FC<CoursesProp> = ({ coursesData, currency }) => {
   return (
     <CoursesContainer>
       {coursesData.map((item) => (
-        <SingleCourse key={item.id}>
+        <SingleCourse key={item.id} $currency={currency}>
           <h2>{item.title}</h2>
 
           <img src={item.img} alt="Course image" />
@@ -27,13 +27,13 @@ const Courses: React.FC<CoursesProp> = ({ coursesData, currency }) => {
               laboriosam error, neque accusamus quo aut!
             </p>
           </Description>
-          <StyledFooter>
+          <StyledFooter $currency={currency}>
             <span>
               {currency === "USD"
                 ? item.price + " USD"
                 : currency === "EUR"
-                ? item.price + " EUR"
-                : item.price + " GBP"}
+                ? (item.price * 0.92).toFixed(2) + " EUR"
+                : (item.price * 0.79).toFixed(2) + " GBP"}
             </span>
             <button>BUY</button>
           </StyledFooter>

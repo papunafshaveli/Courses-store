@@ -16,6 +16,8 @@ export const CourseInfoContainer = styled.div`
   h3 {
     font-size: 2.5rem;
 
+    text-align: center;
+
     color: white;
   }
 

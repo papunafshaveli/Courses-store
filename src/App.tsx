@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <AppContainer>
+    <AppContainer $currency={currency}>
       <StyledHeader>
         <h4>Change currency:</h4>
         <Buttons>
@@ -40,13 +40,21 @@ function App() {
 
 export default App;
 
-const AppContainer = styled.div`
+const AppContainer = styled.div<{ $currency: string }>`
   display: flex;
   flex-direction: column;
   align-items: start;
 
-  padding: 20px 20%;
+  padding: 20px 5%;
+
+  background-color: ${({ $currency }) =>
+    $currency === "USD"
+      ? "darkslategrey"
+      : $currency === "EUR"
+      ? "#88886f"
+      : "#64A075"};
 `;
+
 const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;

@@ -1,14 +1,21 @@
 import styled from "styled-components";
+import { device } from "../../device/device";
 
 export const CoursesContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+
+  @media ${device.tablet} {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    margin: 0 auto;
+  }
 `;
 
-export const SingleCourse = styled.div`
+export const SingleCourse = styled.div<{ $currency: string }>`
   margin-top: 50px;
 
   width: 200px;
@@ -21,7 +28,12 @@ export const SingleCourse = styled.div`
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
-  background-color: antiquewhite;
+  background-color: ${({ $currency }) =>
+    $currency === "USD"
+      ? "#066254"
+      : $currency === "EUR"
+      ? "#737658"
+      : "#84CF39"};
 
   h2 {
     padding: 15px 10px;
@@ -48,7 +60,7 @@ export const Description = styled.div`
   }
 `;
 
-export const StyledFooter = styled.footer`
+export const StyledFooter = styled.footer<{ $currency: string }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,16 +69,28 @@ export const StyledFooter = styled.footer`
   button {
     padding: 5px 16px;
 
-    background-color: greenyellow;
+    background-color: ${({ $currency }) =>
+      $currency === "USD"
+        ? "darkslategrey"
+        : $currency === "EUR"
+        ? "#88886f"
+        : "#64A075"};
 
     border: none;
     border-radius: 5px;
 
     cursor: pointer;
 
+    font-weight: 700;
+
     &:hover {
       background-color: black;
       color: white;
     }
+  }
+
+  span {
+    font-size: 1.4rem;
+    font-weight: 600;
   }
 `;
