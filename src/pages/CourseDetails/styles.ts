@@ -83,4 +83,8 @@ export const Description = styled.div`
 export const H1 = styled.div`
   padding: 10px;
   background-color: #88886f;
+
+  b {
+    color: brown;
+  }
 `;

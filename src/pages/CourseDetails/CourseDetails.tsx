@@ -27,7 +27,9 @@ const CourseDetails = () => {
       <StyledMain>
         <Welcome>
           <H1>
-            <h1>Welcome to the Course - {courseId}</h1>
+            <h1>
+              Welcome to the Course - <b>{courseId}</b>
+            </h1>
           </H1>
           <Description>
             <p>
