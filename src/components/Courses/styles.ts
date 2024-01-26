@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../device/device";
+import { Link } from "react-router-dom";
 
 export const CoursesContainer = styled.div`
   display: flex;
@@ -13,4 +14,9 @@ export const CoursesContainer = styled.div`
 
     margin: 0 auto;
   }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
