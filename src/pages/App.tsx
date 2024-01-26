@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import "./App.css";
-import CourseInfo from "./components/CourseInfo/CourseInfo";
-import { coursesDB } from "./DB/coursesDB";
+import CourseInfo from "../components/CourseInfo/CourseInfo.js";
+import { coursesDB } from "../DB/coursesDB.js";
 import { useState } from "react";
-import Courses from "./components/Courses/Courses.js";
-import { CourseT } from "./types/types.js";
+import Courses from "../components/Courses/Courses.js";
+import { CourseT } from "../types/types.js";
 
 function App() {
   const [coursesData] = useState<CourseT[]>(coursesDB);
