@@ -12,7 +12,7 @@ export const SingleCourse = styled.div<{ $currency: string }>`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
