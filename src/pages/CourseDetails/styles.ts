@@ -1,7 +1,28 @@
 import styled from "styled-components";
 
 export const CourseDetailsContainer = styled.div`
-  background-color: #8d8d83;
+  animation: color 30s infinite linear;
+
+  @keyframes color {
+    0% {
+      background: #349ad9;
+    }
+    20% {
+      background: #065921;
+    }
+    40% {
+      background: #098d9a;
+    }
+    60% {
+      background: #fcca00;
+    }
+    80% {
+      background: #6949a0;
+    }
+    100% {
+      background: #9789af;
+    }
+  }
 
   min-height: 100vh;
 
@@ -37,7 +58,7 @@ export const StyledMain = styled.main`
 `;
 
 export const Welcome = styled.div`
-  background-color: white;
+  background-color: grey;
 
   padding: 10px;
 
@@ -46,12 +67,13 @@ export const Welcome = styled.div`
 
   h1 {
     text-align: center;
+    color: white;
   }
 `;
 
 export const Description = styled.div`
   padding: 20px;
-  background-color: #4b4f49;
+  background-color: #9a94a4;
 
   p {
     font-size: 1.4rem;
