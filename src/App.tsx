@@ -9,7 +9,7 @@ import { CourseT } from "./types/types.js";
 function App() {
   const [coursesData] = useState<CourseT[]>(coursesDB);
   const [currency, setCurrency] = useState<string>("USD");
-  console.log(currency);
+
   const handleUsd = () => {
     setCurrency("USD");
   };
@@ -83,7 +83,7 @@ const Buttons = styled.div<{ $currency: string }>`
 
     background-color: ${({ $currency }) =>
       $currency === "USD"
-        ? "#e1e1e1"
+        ? "#b5afaf"
         : $currency === "EUR"
         ? "#7e9570"
         : "#07af37"};
